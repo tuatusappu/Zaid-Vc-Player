@@ -129,7 +129,7 @@ delcmdmdb = dcmdb.admins
 async def delcmd_is_on(chat_id: int) -> bool:
     chat = await delcmdmdb.find_one({"chat_id": chat_id})
     if not chat:
-        return false
+        return True
     return False
 
 
